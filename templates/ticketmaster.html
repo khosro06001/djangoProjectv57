@@ -28,14 +28,18 @@
 
 
       
-      <form action="{% url 'ticketmaster' %}" method="post">  <!-- <form action="{% url 'ticketmaster' %}" method="get"> -->
       <!-- <form action="{% url 'ticketmaster' %}" method="get">  <\!-- <form action="{% url 'ticketmaster' %}" method="get"> -\-> -->
+	  
+      <form action="{% url 'ticketmaster' %}" method="post">
 	  
           {% csrf_token %}
 	  
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="input-group mb-3" style="margin-top: 25px;">
+
+	      <input type="hidden" name="_method" value="POST"> <!-- MAYBE THIS WILL FORCE THE FORM TO SEND A POST INSTEAD OF A GET?? -->
+	      
               <input type="text" name="events" class="form-control" placeholder="What Genre?">
               <input type="text" name="city" class="form-control" placeholder="What City?">
               <button class="btn btn-danger" type="submit">Search</button>
