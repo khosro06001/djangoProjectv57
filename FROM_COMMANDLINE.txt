@@ -173,10 +173,18 @@ pgrep -f manage.py | xargs kill
 
 exit
 
+### FIRST TIME GIT: 
 git init
 git add .
 git commit -m "intial commit"
 git branch -M main
 git remote add origin https://github.com/khosro06001/djangoProjectv57.git
 git push -u origin main
+
+### SECOND TIME GIT: 
+git add .
+git commit -m "ANOTHER COMMIT"
+git branch -M main
+git push -u origin main
+
 
