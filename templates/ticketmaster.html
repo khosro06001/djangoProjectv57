@@ -1,0 +1,102 @@
+
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>God Oh God of Little Children in Gaza Why Have You Forsaken Them</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	  rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	  crossorigin="anonymous">
+    <link rel="stylesheet"
+	  href="{% static 'ticketmaster.css' %}">
+  </head>
+
+  <body>
+
+    
+    <div class="container-fluid bg-seconday text-white text-center">
+      <h1 class="display-1">Ticketmaster</h1>
+      <h1>Quickly Find Tickets Around You</h1>
+
+
+
+      
+      <form action="{% url 'ticketmaster' %}" method="post">  <!-- <form action="{% url 'ticketmaster' %}" method="get"> -->
+      <!-- <form action="{% url 'ticketmaster' %}" method="get">  <\!-- <form action="{% url 'ticketmaster' %}" method="get"> -\-> -->
+	  
+          {% csrf_token %}
+	  
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="input-group mb-3" style="margin-top: 25px;">
+              <input type="text" name="events" class="form-control" placeholder="What Genre?">
+              <input type="text" name="city" class="form-control" placeholder="What City?">
+              <button class="btn btn-danger" type="submit">Search</button>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container my-5  p-5 shadow-lg bg-white rounded" id="event-container">
+      <div class="row align-items-center g-2">
+        <div class="col-md">
+          <h4 class="text-secondary">{{ total_events }} ALL EVENTS</h4>
+	  
+          {% for event in events %}
+          <div class="shadow-lg mt-4">
+            <div class="card mb-3">
+              <div class="row g-2">
+                <div class="col-md-4">
+                  <img src="{{ event.imageUrl }}" class="img-fluid rounded-start"
+                       alt="event-image">
+                </div>
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="col-sm-7 col-6">
+                      <h5 class="card-title">{{ event.eventName }}</h5>
+                      <h5 class="card-text">{{ event.venueName }}</h5>
+                      <p class="card-text">{{ event.venueAddress }}</p>
+                      <p class="card-text">{{ event.venueCity }}, {{ event.venueState }}</p>
+
+                      <p class="card-text"><a href="{{ event.ticketLink }}" target="_blank"
+                                              class="btn btn-primary">Find Ticket</a>
+                      </p>
+                    </div>
+
+                    <div class="col-sm-5 col-6 text-end p-4">
+                      <p class="fs-5 text-success fw-bold">{{ event.eventDate }}</p>
+                      <p class="fs-5 text-success fw-bold">{{ event.eventTime }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+</script>
+
+
+</body>
+</html>

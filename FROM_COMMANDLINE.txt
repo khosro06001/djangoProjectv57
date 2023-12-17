@@ -1,0 +1,174 @@
+
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+FOR FIRST TIME SEE FURTHER DOWN
+
+############################################################
+# 0 cd $(cat zdir) && gnome-terminal &
+# 1 # e views.py ## -- or -- ## cd templates && e hello.html
+# 2 venv manage.py runserver
+#   source venv/bin/activate;
+$   bash requirementsPipInstall.sh ### = pip install -r requirements9.txt;
+#   python ../manage.py runserver
+# 3 firefox 127.0.0.1:8000
+#   CTRL+SHIFT+K console
+# 4 my documentation
+# 5 questions
+# 6 google
+# 7 lynx fs navigation
+###############################################################################
+
+### NOT FIRST TIME ############################################################
+### NOT FIRST TIME ############################################################
+### NOT FIRST TIME ############################################################
+####################################### FIRST DESKTOP #########################
+####################################### FIRST DESKTOP #########################
+####################################### FIRST DESKTOP #########################
+
+cd /home/k/wp_cs416/final_project/djangoProjectv57
+ D=/home/k/wp_cs416/final_project
+F=djangoProject
+FV=${F}v57
+###APP01=tma01
+APP01=ticketmaster
+TEMPLATES=templates
+cd $D/$FV/$F/$APP01 || exit 127
+####################################### SECOND DESKTOP #########################
+####################################### SECOND DESKTOP #########################
+####################################### SECOND DESKTOP #########################
+D=/home/k/wp_cs416/final_project
+F=djangoProject
+FV=${F}v57
+APP01=tma01
+TEMPLATES=templates
+### venv ######################
+### venv ######################
+### venv ######################
+cd $D/$FV || exit 127      ############# important to do the venv here!!!
+python3 -m venv venv
+source venv/bin/activate
+####################################
+bash requirementsPipInstall.sh
+####################################
+pip install --upgrade pip setuptools
+pip install pillow-simd
+pip install --upgrade pillow
+pip install pillow --global-option="build_ext" --global-option="--zlib"
+pip install asgiref certifi charset-normalizer Django idna requests sqlparse typing_extensions tzdata urllib3 django-crispy-forms crispy-bootstrap5 numpy matplotlib
+####################################
+
+#### NOW JUST manage.py ########################
+#### NOW JUST manage.py ########################
+#### NOW JUST manage.py ########################
+cd $D/$FV/$F/$APP01 || exit 127
+##################################
+python ../manage.py makemigrations
+python ../manage.py migrate
+python ../manage.py runserver
+### python manage.py runserver &
+### to stop the runserver
+###            pgrep -f manage.py | xargs kill
+###            pgrep -f manage.py | xargs kill
+###            pgrep -f manage.py | xargs kill
+###            pgrep -f manage.py | xargs kill
+##############################################
+###############################################################################
+###############################################################################
+###############################################################################
+################################################################################
+## cd /home/k/wp_cs416/final_project/my_final_project/djangoProject9
+## cd /home/k/wp_cs416/final_project/my_final_project/djangoProject9/APIExamples
+### KEEP THIS
+### gh repo clone https://github.com/cs416f23/APIExamples.git
+### cd APIExamples
+#######################################################################################
+
+
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+### FIRST TIME #########################
+D=/home/k/wp_cs416/final_project
+cd $D || exit
+F=djangoProject
+FV=${F}v57
+###APP01=tma01
+APP01=ticketmaster
+TEMPLATES=templates
+mkdir $FV
+cd $FV || exit 127
+
+
+NOW ACTIVATE THE ENVIRONMENT!!! || exit
+NOW ACTIVATE THE ENVIRONMENT!!! || exit
+NOW ACTIVATE THE ENVIRONMENT!!! || exit
+NOW ACTIVATE THE ENVIRONMENT!!! || exit
+
+####################################
+####################################
+####################################
+####################################
+####################################
+####################################
+####################################
+python3 -m venv venv
+source venv/bin/activate
+####################################
+pip install --upgrade pip setuptools
+pip install pillow-simd
+pip install --upgrade pillow
+pip install pillow --global-option="build_ext" --global-option="--zlib"
+pip install asgiref certifi charset-normalizer Django idna requests sqlparse typing_extensions tzdata urllib3 django-crispy-forms crispy-bootstrap5 numpy matplotlib
+pip install Django
+############################
+###############################
+### after that startproject and startapp
+### django-admin startproject $F
+### cd $F || exit
+### django-admin startapp $APP01
+####################################
+
+
+django-admin startproject $F
+cd $F || exit
+django-admin startapp $APP01
+############### manage.py #####
+
+cp djangoFinalProject/manage.py .
+
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+### python manage.py runserver &
+### to stop the runserver
+pgrep -f manage.py | xargs kill
+pgrep -f manage.py | xargs kill
+pgrep -f manage.py | xargs kill
+pgrep -f manage.py | xargs kill
+pgrep -f manage.py | xargs kill
+pgrep -f manage.py | xargs kill
+################################
+
+### django-admin startproject $F
+### cd $F || exit
+### django-admin startapp $APP01
+####################################
+
+
+
+
+exit
