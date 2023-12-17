@@ -172,3 +172,11 @@ pgrep -f manage.py | xargs kill
 
 
 exit
+
+git init
+git add .
+git commit -m "intial commit"
+git branch -M main
+git remote add origin https://github.com/khosro06001/djangoProjectv57.git
+git push -u origin main
+
